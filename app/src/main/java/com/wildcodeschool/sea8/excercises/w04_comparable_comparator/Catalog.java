@@ -36,6 +36,7 @@ public class Catalog {
         // Note that we are seeding the random shuffling so that we always get the same
         // result on consecutive executions with the same data.
         Collections.shuffle(catalog, new Random(20220310));
+        Collections.sort(catalog, new PriceComparator());
 
         // Next we have a look at the data.
         printCatalog(catalog);
